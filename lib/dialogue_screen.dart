@@ -55,4 +55,17 @@ class _DialogueScreen extends State<DialogueScreen> {
       _messages.insert(0, message);
     });
   }
+
+  void _handleSubmitted(String text) {
+    _textController.clear();
+    ChatMessage message = new ChatMessage(
+      text: text,
+      name: "Rances",
+      type: true,
+    );
+    setState(() {
+      _messages.insert(0, message);
+    });
+    Response(text);
+  }
 }
