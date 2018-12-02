@@ -9,6 +9,7 @@
 .buildlog/
 .histry
 .svn/
+config/dialogflow.json
 
 # IntelliJ related
 *.iml
