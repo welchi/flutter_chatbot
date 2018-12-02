@@ -37,4 +37,22 @@ class _DialogueScreen extends State<DialogueScreen> {
               ],
             )));
   }
+
+  void Response(query) async {
+    _textController.clear();
+    AuthGoogle authGoogle =
+        await AuthGoogle(fileJson: "Asset Your File Json").build();
+    Dialogflow dialogflow =
+        Dialogflow(authGoogle: authGoogle, language: Language.JAPANESE);
+    AIResponse response = await dialogflow.detectIntent(query);
+    ChatMessage message = new ChatMessage(
+      text: response.getMessage() ??
+          new CardDialogflow(response.getListMessage()[0]).title,
+      name: "Bot",
+      type: false,
+    );
+    setState(() {
+      _messages.insert(0, message);
+    });
+  }
 }
