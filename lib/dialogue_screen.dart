@@ -60,7 +60,7 @@ class _DialogueScreen extends State<DialogueScreen> {
     _textController.clear();
     ChatMessage message = new ChatMessage(
       text: text,
-      name: "Rances",
+      name: "Welchi",
       type: true,
     );
     setState(() {
