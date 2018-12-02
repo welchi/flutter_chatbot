@@ -123,4 +123,25 @@ class ChatMessage extends StatelessWidget {
       ))
     ];
   }
+
+  List<Widget> myMessage(context) {
+    return <Widget>[
+      new Expanded(
+        child: new Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: <Widget>[
+            new Text(this.name, style: Theme.of(context).textTheme.subhead),
+            new Container(
+              margin: const EdgeInsets.only(top: 5.0),
+              child: new Text(text),
+            ),
+          ],
+        ),
+      ),
+      new Container(
+        margin: const EdgeInsets.only(left: 16.0),
+        child: new CircleAvatar(child: new Text(this.name[0])),
+      ),
+    ];
+  }
 }
