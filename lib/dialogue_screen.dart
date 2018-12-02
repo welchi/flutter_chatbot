@@ -144,4 +144,15 @@ class ChatMessage extends StatelessWidget {
       ),
     ];
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      margin: const EdgeInsets.symmetric(vertical: 10.0),
+      child: new Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: this.type ? myMessage(context) : otherMessage(context),
+      ),
+    );
+  }
 }
