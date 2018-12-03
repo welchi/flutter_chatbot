@@ -60,7 +60,7 @@ class _DialogueScreen extends State<DialogueScreen> {
     _textController.clear();
     ChatMessage message = new ChatMessage(
       text: text,
-      name: "Welchi",
+      name: "You",
       type: true,
     );
     setState(() {
@@ -107,7 +107,7 @@ class ChatMessage extends StatelessWidget {
     return <Widget>[
       new Container(
         margin: const EdgeInsets.only(right: 16.0),
-        child: new CircleAvatar(child: new Image.asset("img/placeholder.png")),
+        child: new CircleAvatar(child: new Image.asset("img/bot.jpg")),
       ),
       new Expanded(
           child: new Column(
