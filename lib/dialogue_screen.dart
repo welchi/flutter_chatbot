@@ -41,7 +41,8 @@ class _DialogueScreen extends State<DialogueScreen> {
   void Response(query) async {
     _textController.clear();
     AuthGoogle authGoogle =
-        await AuthGoogle(fileJson: "Asset Your File Json").build();
+        await AuthGoogle(fileJson: "flutter_chatbot/config/dialogflow.json")
+            .build();
     Dialogflow dialogflow =
         Dialogflow(authGoogle: authGoogle, language: Language.JAPANESE);
     AIResponse response = await dialogflow.detectIntent(query);
