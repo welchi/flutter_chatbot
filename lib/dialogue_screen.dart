@@ -107,7 +107,7 @@ class ChatMessage extends StatelessWidget {
     return <Widget>[
       Container(
         margin: EdgeInsets.only(right: 16.0),
-        child: CircleAvatar(child: Image.asset("img/bot.jpg")),
+        child: CircleAvatar(child: Image.asset("img/bot.png")),
       ),
       Expanded(
           child: Column(
