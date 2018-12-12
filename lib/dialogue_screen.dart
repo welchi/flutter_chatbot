@@ -43,7 +43,7 @@ class _DialogueScreen extends State<DialogueScreen> {
     AuthGoogle authGoogle =
         await AuthGoogle(fileJson: "config/dialogflow.json").build();
     Dialogflow dialogflow =
-        Dialogflow(authGoogle: authGoogle, language: Language.JAPANESE);
+        Dialogflow(authGoogle: authGoogle, language: Language.ENGLISH);
     AIResponse response = await dialogflow.detectIntent(query);
     ChatMessage message = ChatMessage(
       text: response.getMessage() ??
