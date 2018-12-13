@@ -7,8 +7,9 @@
 .DS_Store
 .atom/
 .buildlog/
-.history
+.histry
 .svn/
+config/dialogflow.json
 
 # IntelliJ related
 *.iml
